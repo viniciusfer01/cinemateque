@@ -1,0 +1,14 @@
+<%= page_title(@movie_theater.name) %>
+<dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+  <div class="flex flex-col pb-3">
+    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Cidade: </dt>
+    <dd class="text-lg font-semibold"><%= @movie_theater.city %></dd>
+  </div>
+</dl>
+<h2 class="text-4xl font-bold dark:text-white mb-3">Salas</h2>
+<div class="mb-6 grid grid-cols-4 gap-4">
+<% @movie_theater.rooms.each do |room| %>
+  <%= render room %>
+<% end %>
+</div>
+<%= link_to 'Adicionar Sala', new_movie_theater_room_path(@movie_theater), class: 'btn-confirm'%>

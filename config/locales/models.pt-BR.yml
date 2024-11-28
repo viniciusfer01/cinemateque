@@ -1,0 +1,25 @@
+pt-BR:
+  activerecord:
+    models:
+      movie_theater:
+        one: Cinema
+        other: Cinemas
+      room:
+        one: Sala
+        other: Salas
+      movie:
+        one: Filme
+        other: Filmes
+    attributes:
+      movie_theater:
+        name: Nome
+        city: Cidade
+      room:
+        name: Nome
+        capacity: Capacidade
+      movie:
+        title: Nome
+        year: Ano
+        director: Direção
+        plot: Enredo
+

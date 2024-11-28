@@ -1,0 +1,23 @@
+pt-BR:
+  movie_theaters:
+    new:
+      title: 'Novo Cinema'
+    create:
+      success: 'Cinema adicionado com sucesso.'
+      failure: 'Cinema não foi adicionado.'
+    index:
+      title: 'Cinemas'
+  rooms:
+    new:
+      title: 'Nova Sala'
+    create:
+      success: 'Sala adicionada com sucesso.'
+      failure: 'Sala não foi adicionada.'
+  movies:
+    new:
+      title: 'Novo Filme'
+    index: 
+      title: 'Filmes'
+    create:
+      success: 'Filme adicionado com sucesso.'
+      failure: 'Filme não foi adicionado.'
