@@ -1,0 +1,10 @@
+<h2>Sessões do cinema: <%= @movie_theater.name %></h2>
+<% @sessions.each do |session| %>
+  <div>
+    <p>Filme: <%= session.movie.title %></p>
+    <p>Dia: <%= session.day %></p>
+    <p>Hora: <%= session.time %></p>
+  </div>
+<% end %>
+
+<%= button_link 'Adicionar Sessão', new_movie_theater_session_path(@movie_theater) %>
