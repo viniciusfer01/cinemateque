@@ -7,15 +7,24 @@ describe 'Room API' do
       movie_theater.rooms.create!(name: 'sala 01', capacity: '200')
       movie_theater.rooms.create!(name: 'sala VIP', capacity: '40')
       
-      get "/api/rooms?#{movie_theater.id}"
+      get "/api/rooms?movie_theater=#{movie_theater.id}"
 
       expect(response.status).to eq 200
-      expect(response.body).to have_content 'Cine natal'    
-      expect(response.body).to have_content 'Natal'    
-      expect(response.body).to have_content 'sala 01'    
-      expect(response.body).to have_content '200'    
-      expect(response.body).to have_content 'sala VIP'    
-      expect(response.body).to have_content '40'    
+      expect(response.content_type).to include 'application/json'  
+      expect(response.body).to include 'Cine natal'    
+      expect(response.body).to include 'Natal'    
+      expect(response.body).to include 'sala 01'    
+      expect(response.body).to include '200'    
+      expect(response.body).to include 'sala VIP'    
+      expect(response.body).to include '40'    
     end
+
+    # it 'movie theater does not exist' do 
+    #   get "/api/rooms"
+
+    #   expect(response.status).not_to eq 200
+    #   expect(response.status).to eq 404
+    #   expect(response.body).to include 'Cinema não encontrado'      
+    # end
   end
 end 
