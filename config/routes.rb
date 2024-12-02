@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   end
 
   resources :movies, only: [:index, :new, :create]
+
+  namespace :api do
+    resources :rooms, only: [:index]
+  end
 end
